@@ -13,3 +13,4 @@ results = resp.json()['results']
 
 for r in results:
     print(r)
+

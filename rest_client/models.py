@@ -36,7 +36,4 @@ class DataSet:
             self.humidity = float(data_dict['humidity'])
             self.light_level = int(data_dict['light_level'])
             self.soil_moisture = int(data_dict['soil_moisture'])
-
-
-
-
+            self.soil_nutrients = int(data_dict['soil_nutrients'])
