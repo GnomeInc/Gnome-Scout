@@ -16,8 +16,10 @@ def get_data():
     return requests.get(_url('tracker/rest_index/'))
 
 
-def add_data(token, user, gnome, date, time, temperature, humidity, light_level, soil_moisture, soil_nutrients):
-    pass
+def add_data(token, data):
+    return requests.post(_url('tracker/rest_index/'),
+                         headers={'Authorization': "Token " + token},
+                         json=data)
 
 
 def get_datum(datum_id):

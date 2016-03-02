@@ -7,6 +7,7 @@
 """
 
 from datetime import date
+import json
 
 
 class DataSet:
@@ -23,17 +24,14 @@ class DataSet:
     :soil_moisture:     soil moisture level normalized to optimal soil moisture for plants
     """
 
-    def __init__(self, data_dict = None):
-        if data_dict is None:
-            pass
-        else:
-            self.id = data_dict['id']
-            self.user = data_dict['user']
-            self.gnome = data_dict['gnome']
-            self.date = date(data_dict['date'])
-            self.time = data_dict['time']
-            self.temperature = float(data_dict['temperature'])
-            self.humidity = float(data_dict['humidity'])
-            self.light_level = int(data_dict['light_level'])
-            self.soil_moisture = int(data_dict['soil_moisture'])
-            self.soil_nutrients = int(data_dict['soil_nutrients'])
+    def __init__(self, id, user, gnome, date, time, temperature, humidity, light_level, soil_moisture, soil_nutrients):
+        self.id = id
+        self.user = user
+        self.gnome = gnome
+        self.date = date
+        self.time = time
+        self.temperature = temperature
+        self.humidity = humidity
+        self.light_level = light_level
+        self.soil_moisture = soil_moisture
+        self.soil_nutrients = soil_nutrients
