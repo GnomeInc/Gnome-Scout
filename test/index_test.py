@@ -4,3 +4,8 @@ resp = rest.get_data()
 if resp.status_code != 200:
     raise rest_errors.ApiError(resp.status_code, "Unable to get data.")
 print(resp.json())
+
+index = resp.json()['results']
+
+for i in index:
+    print(i)

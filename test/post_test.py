@@ -2,7 +2,7 @@ from rest_client import rest_api as rest, models, rest_errors
 from test.token_test import get_token
 import datetime
 import random
-import json
+
 
 def make_data(gnome):
     return {
@@ -37,11 +37,11 @@ ds_dict = ds.__dict__
 
 resp = rest.add_data(token, ds_dict)
 
-print(resp.text)
-
-print(resp.json)
-
-if resp.status_code != 200:
+if resp.status_code != 201:
     raise rest_errors.ApiError(resp.status_code, "Unable to post data")
 
-print(resp.json)
+print(resp.json())
+
+mod = models.make_data_set(resp.json())
+
+print(mod.light_level)

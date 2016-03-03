@@ -6,8 +6,25 @@
     Copyright: GnomeInc, Some Rights Reserved
 """
 
-from datetime import date
-import json
+
+def make_data_set(data_dict):
+    """
+    Helper function to reconstruct the DataSet object from a dictionary.
+    :param data_dict: The dictionary
+    :return: the DataSet
+    """
+    return DataSet(
+        data_dict['id'],
+        data_dict['user'],
+        data_dict['gnome'],
+        data_dict['date'],
+        data_dict['time'],
+        data_dict['temperature'],
+        data_dict['humidity'],
+        data_dict['light_level'],
+        data_dict['soil_moisture'],
+        data_dict['nutrient_level']
+    )
 
 
 class DataSet:
@@ -24,7 +41,7 @@ class DataSet:
     :soil_moisture:     soil moisture level normalized to optimal soil moisture for plants
     """
 
-    def __init__(self, id, user, gnome, date, time, temperature, humidity, light_level, soil_moisture, soil_nutrients):
+    def __init__(self, id, user, gnome, date, time, temperature, humidity, light_level, soil_moisture, nutrient_level):
         self.id = id
         self.user = user
         self.gnome = gnome
@@ -34,4 +51,4 @@ class DataSet:
         self.humidity = humidity
         self.light_level = light_level
         self.soil_moisture = soil_moisture
-        self.soil_nutrients = soil_nutrients
+        self.nutrient_level = nutrient_level
