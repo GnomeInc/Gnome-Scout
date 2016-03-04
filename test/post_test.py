@@ -19,7 +19,7 @@ def make_data(gnome):
     }
 
 
-token = get_token()
+token = get_token('gnome', '8af3b8180c860161e485479c8b26f353')
 data = make_data(1)
 
 ds = models.DataSet(data['id'],
