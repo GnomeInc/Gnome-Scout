@@ -7,7 +7,6 @@ import random
 def make_data(gnome):
     return {
         'id': 0,
-        'user': 1,
         'gnome': gnome,
         'date': datetime.datetime.now().date().strftime("%Y-%m-%d"),
         'time': datetime.datetime.now().time().strftime("%H:%M:%S"),
@@ -20,10 +19,10 @@ def make_data(gnome):
 
 
 token = get_token('gnome', '8af3b8180c860161e485479c8b26f353')
-data = make_data(1)
+# token = get_token('gnome', 'applepie')
+data = make_data(2)
 
 ds = models.DataSet(data['id'],
-                    data['user'],
                     data['gnome'],
                     data['date'],
                     data['time'],

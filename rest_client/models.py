@@ -15,7 +15,6 @@ def make_data_set(data_dict):
     """
     return DataSet(
         data_dict['id'],
-        data_dict['user'],
         data_dict['gnome'],
         data_dict['date'],
         data_dict['time'],
@@ -41,9 +40,8 @@ class DataSet:
     :soil_moisture:     soil moisture level normalized to optimal soil moisture for plants
     """
 
-    def __init__(self, id, user, gnome, date, time, temperature, humidity, light_level, soil_moisture, nutrient_level):
+    def __init__(self, id, gnome, date, time, temperature, humidity, light_level, soil_moisture, nutrient_level):
         self.id = id
-        self.user = user
         self.gnome = gnome
         self.date = date
         self.time = time

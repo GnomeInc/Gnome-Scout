@@ -1,7 +1,7 @@
 import requests
 
-PATH = "http://127.0.0.1:8000/"
-# PATH = "https://secure-earth-85725.herokuapp.com/"
+# PATH = "http://127.0.0.1:8000/"
+PATH = "https://secure-earth-85725.herokuapp.com/"
 
 
 def _url(path):
