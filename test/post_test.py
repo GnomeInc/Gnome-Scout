@@ -18,9 +18,9 @@ def make_data(gnome):
     }
 
 
-token = get_token('gnome', '8af3b8180c860161e485479c8b26f353')
-# token = get_token('gnome', 'applepie')
-data = make_data(2)
+# token = get_token('gnome', '8af3b8180c860161e485479c8b26f353')
+token = get_token('gnome', 'applepie')
+data = make_data(1)
 
 ds = models.DataSet(data['id'],
                     data['gnome'],
