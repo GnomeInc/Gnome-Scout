@@ -39,6 +39,9 @@ def do_post():
     print(resp.json())
 
 
+for i in range(6):
+    do_post()
+
 while True:
     do_post()
     time.sleep(60*5)
